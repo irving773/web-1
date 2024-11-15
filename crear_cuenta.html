@@ -1,0 +1,99 @@
+<?php
+
+session_start();
+
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('background.jpg'); /* Puedes cambiar esto por tu imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.8);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #00ff00;
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+        }
+        form {
+            background-color: rgba(42, 42, 42, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 255, 0, 0.5);
+            width: 300px;
+            backdrop-filter: blur(10px);
+        }
+        p {
+            margin: 10px 0;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 5px 0 20px;
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+            background-color: #1e1e1e;
+            color: #ffffff;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            border-color: #008000;
+            outline: none;
+        }
+        input[type="submit"] {
+            background-color: #00ff00;
+            border: none;
+            border-radius: 5px;
+            padding: 12px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        input[type="submit"]:hover {
+            background-color: #008000;
+            transform: scale(1.05);
+        }
+        .message {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .error {
+            color: red;
+        }
+        .success {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Crear Cuenta</h1>
+        <form action="registro.php" method="post">
+            <p>Usuario: <input type="text" name="usuario" required></p>
+            <p>Email: <input type="email" name="email" required></p>
+            <p>Contraseña: <input type="password" name="contraseña" required></p>
+            <input type="submit" value="Registrar">
+        </form>
+</body>
+</html>
